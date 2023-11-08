@@ -1,0 +1,110 @@
+// Using All Helpers Directory Content
+@use "helpers/usinghelpers" as *;
+
+// ----- Begining Of The Project -----
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial";
+  height: 100vh;
+  background: color(linear-gradient);
+  padding: 50px 0;
+}
+.container {
+  max-height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: color(main-color);
+  border-radius: 10px;
+  .heading {
+    @include media(sm) {
+      width:80%;
+    }
+    background-color: color(head-color);
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    .text {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+      background-image: color(linear-gradient);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .all-posts {
+    @include flex(null, column, null, null, 30px);
+    @include media(xl) {
+      @include flex(null, row, space-between, flex-start, 30px);
+    }
+    height: 75vh;
+    &__users {
+      @include media(xl) {
+        flex: 1;
+      }
+      background-color: color(userPostMain-color);
+      border-radius: 10px 0 0 10px;
+      padding: 20px;
+      height: 40vh;
+      @include scrollbar;
+      .user {
+        @include media(sm) {
+          width: 80%;
+          margin: 0 auto 20px;
+        }
+        @include media(md) {
+          width: 70%;
+          margin: 0 0 20px;
+        }
+        background-color: color(userPostSecondary-color);
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        @include transition;
+        @include linearGradientHover(name);
+        &__name {
+          margin-bottom: 10px;
+        }
+      }
+      .user.active {
+        background: color(linear-gradient);
+        color: white;
+      }
+    }
+    &__posts {
+      @include media(xl) {
+        flex: 2;
+      }
+      background-color: color(userPostMain-color);
+      border-radius: 10px 0 0 10px;
+      padding: 20px;
+      height: 70vh;
+      @include scrollbar;
+      .post {
+        @include media(sm) {
+          width: 80%;
+          margin: 0 auto 20px;
+        }
+        @include media(md) {
+          width: 90%;
+          margin: 0 0 20px;
+        }
+        background-color: color(userPostSecondary-color);
+        padding: 15px;
+        border-radius: 10px;
+        @include transition;
+        @include linearGradientHover(title)
+      }
+    }
+  }
+}

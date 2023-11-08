@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial";
+  height: 100vh;
+  background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+  padding: 50px 0;
+}
+
+.container {
+  max-height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+.container .heading {
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .container .heading {
+    width: 80%;
+  }
+}
+.container .heading .text {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  background-image: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container .all-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 75vh;
+}
+@media (min-width: 1200px) {
+  .container .all-posts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+.container .all-posts__users {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px 0 0 10px;
+  padding: 20px;
+  height: 40vh;
+  overflow: auto;
+}
+@media (min-width: 1200px) {
+  .container .all-posts__users {
+    flex: 1;
+  }
+}
+.container .all-posts__users::-webkit-scrollbar {
+  width: 10px;
+}
+.container .all-posts__users::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.container .all-posts__users::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+}
+.container .all-posts__users .user {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+@media (max-width: 767px) {
+  .container .all-posts__users .user {
+    width: 80%;
+    margin: 0 auto 20px;
+  }
+}
+@media (min-width: 768px) {
+  .container .all-posts__users .user {
+    width: 70%;
+    margin: 0 0 20px;
+  }
+}
+.container .all-posts__users .user:hover {
+  background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+  color: white;
+}
+.container .all-posts__users .user__name {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 15px;
+}
+.container .all-posts__users .user__name::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  bottom: -5px;
+  border-radius: 20%;
+  background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+}
+.container .all-posts__users .user__name {
+  margin-bottom: 10px;
+}
+.container .all-posts__users .user.active {
+  background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+  color: white;
+}
+.container .all-posts__posts {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px 0 0 10px;
+  padding: 20px;
+  height: 70vh;
+  overflow: auto;
+}
+@media (min-width: 1200px) {
+  .container .all-posts__posts {
+    flex: 2;
+  }
+}
+.container .all-posts__posts::-webkit-scrollbar {
+  width: 10px;
+}
+.container .all-posts__posts::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.container .all-posts__posts::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+}
+.container .all-posts__posts .post {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+@media (max-width: 767px) {
+  .container .all-posts__posts .post {
+    width: 80%;
+    margin: 0 auto 20px;
+  }
+}
+@media (min-width: 768px) {
+  .container .all-posts__posts .post {
+    width: 90%;
+    margin: 0 0 20px;
+  }
+}
+.container .all-posts__posts .post:hover {
+  background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+  color: white;
+}
+.container .all-posts__posts .post__title {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 15px;
+}
+.container .all-posts__posts .post__title::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  bottom: -5px;
+  border-radius: 20%;
+  background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+}/*# sourceMappingURL=main.css.map */

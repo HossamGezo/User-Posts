@@ -1,0 +1,64 @@
+// Import Variables & Functions
+@use "variables" as *;
+@use "functions" as *;
+
+
+// ----- Begining OF The Mixins -----
+
+// Flex Mixin
+@mixin flex($wrap, $direction, $justify, $align, $gap) {
+  display: flex;
+  flex-wrap: $wrap;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+// Media Mixin
+@mixin media($screen-measure) {
+  @media #{map-get($media-breakpoints, $screen-measure)} {
+    @content;
+  }
+}
+
+// Transition Mixin
+@mixin transition {
+  transition: 0.3s ease;
+}
+
+// Scrollbar Mixin
+@mixin scrollbar {
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: color(main-color);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: color(thumb-color);
+  }
+}
+
+// Hover Mixin 
+@mixin linearGradientHover($var) {
+  &:hover {
+    background: color(linear-gradient);
+    color: white;
+  }
+  &__#{$var} {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 15px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 70%;
+      height: 2px;
+      bottom: -5px;
+      border-radius: 20%;
+      background: color(linear-gradient);
+    }
+  }
+}

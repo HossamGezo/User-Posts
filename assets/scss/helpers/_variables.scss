@@ -1,0 +1,23 @@
+// ----- Color BreakPionts -----
+$color-breakpoints: (
+  linear-gradient: linear-gradient(90deg,
+    rgba(131,58,180,1) 0%, 
+    rgba(253,29,29,1) 50%, 
+    rgba(252,176,69,1) 100%),
+  thumb-color: linear-gradient(to bottom,
+    rgba(131,58,180,1) 0%, 
+    rgba(253,29,29,1) 50%, 
+    rgba(252,176,69,1) 100%),
+  main-color: rgba(255, 255, 255, 0.3),
+  userPostMain-color: rgba(255, 255, 255, 0.4),
+  userPostSecondary-color: rgba(255, 255, 255, 0.5),
+  head-color: rgba(255, 255, 255, 0.6),
+);
+
+// ----- Medai BreakPoints -----
+$media-breakpoints: (
+  sm: "(max-width: 767px)",
+  md: "(min-width: 768px)",
+  lg: "(min-width: 991px)",
+  xl: "(min-width: 1200px)",
+);
