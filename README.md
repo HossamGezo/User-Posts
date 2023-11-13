@@ -1,6 +1,6 @@
 # User-Posts
 
-I Used [JSON Placeholder](https://jsonplaceholder.typicode.com/) - API To Request Users And Posts Using XML HttpRequest
+### I Used [JSON Placeholder](https://jsonplaceholder.typicode.com/) - API To Request Users And Posts Using XML HttpRequest
 
 ### You Can Check My Project From Here [User Posts](https://hossamgezo.github.io/User-Posts/)
 
